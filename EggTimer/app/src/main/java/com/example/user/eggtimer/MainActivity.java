@@ -13,9 +13,18 @@ public class MainActivity extends AppCompatActivity {
 
     SeekBar timerSeekBar;
     TextView timerTextView;
-    Button button ;
+    Button button;
     Boolean counterActive = false;
     CountDownTimer countDownTimer;
+
+    public void reset(){
+        timerTextView.setText("0:30");
+        timerSeekBar.setProgress(30);
+        countDownTimer.cancel();
+        button.setText("Go!!");
+        timerSeekBar.setEnabled(true);
+        counterActive = false;
+    }
 
     public void updateTimer(int secondsLeft){
 
@@ -34,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void controlTimer(View view){
 
-        if(counterActive = false){
+        if(counterActive == false){
             counterActive = true;
             timerSeekBar.setEnabled(false);
             button.setText("Stop!");
@@ -51,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onFinish() {
 
-                    timerTextView.setText("0:00");
+                    reset();
                     MediaPlayer mplayer = MediaPlayer.create(getApplicationContext(), R.raw.horn);
                     mplayer.start();
 
@@ -59,10 +68,7 @@ public class MainActivity extends AppCompatActivity {
 
             }.start();
         }else{
-            timerTextView.setText("0:30");
-            timerSeekBar.setProgress(30);
-            countDownTimer.cancel();
-            button.setText("Go!!");
+            reset();
         }
     }
 
