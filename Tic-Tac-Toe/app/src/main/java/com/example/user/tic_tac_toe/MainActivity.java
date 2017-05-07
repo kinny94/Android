@@ -111,11 +111,20 @@ public class MainActivity extends AppCompatActivity {
             currentState[i] = 2;
         }
         //changing the image of imageviews in grid layout
+//        GridLayout grid = (GridLayout)findViewById(R.id.grid);
+//        for(int i=0; i<grid.getChildCount(); i++){
+//            ((ImageView) grid.getChildAt(i)).setImageResource(0);
+//        }
+
         GridLayout grid = (GridLayout)findViewById(R.id.grid);
         for(int i=0; i<grid.getChildCount(); i++){
-            ((ImageView) grid.getChildAt(i)).setImageResource(0);
+            System.out.println(grid.getColumnCount());
+            LinearLayout ll = (LinearLayout) grid.getChildAt(i);
+            for(int k=0; k<ll.getChildCount(); k++){
+                System.out.println(ll.getChildAt(k));
+                ((ImageView) ll.getChildAt(k)).setImageResource(0);
+            }
         }
-
     }
 
     @Override
