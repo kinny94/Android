@@ -1,0 +1,10 @@
+Java Datatype size = 
+
+byte = 8 bits
+short = 16 bits
+int = 16 bits
+long = 64 bits
+float = 32 bits
+double = 64 bits
+char =  ' ' = 16 bits
+boolean = 1 bit
