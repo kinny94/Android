@@ -1,0 +1,24 @@
+<resources>
+    <!--
+    TODO: Before you run your application, you need a Google Maps API key.
+
+    To get one, follow this link, follow the directions and press "Create" at the end:
+
+    https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend&keyType=CLIENT_SIDE_ANDROID&r=CC:3F:AA:26:0A:8B:D3:41:05:9F:83:EB:FF:9D:42:2D:04:1D:03:80%3Bcom.example.kinny.mapsdemo
+
+    You can also add your credentials to an existing key, using these values:
+
+    Package name:
+    CC:3F:AA:26:0A:8B:D3:41:05:9F:83:EB:FF:9D:42:2D:04:1D:03:80
+
+    SHA-1 certificate fingerprint:
+    CC:3F:AA:26:0A:8B:D3:41:05:9F:83:EB:FF:9D:42:2D:04:1D:03:80
+
+    Alternatively, follow the directions here:
+    https://developers.google.com/maps/documentation/android/start#get-key
+
+    Once you have your key (it starts with "AIza"), replace the "google_maps_key"
+    string in this file.
+    -->
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyCKnDI2l1aGjqdKXPF7ee2wX9YXycVY1qU</string>
+</resources>
