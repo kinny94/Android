@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Favorite Places</string>
+    <string name="title_activity_places">Map</string>
+</resources>
