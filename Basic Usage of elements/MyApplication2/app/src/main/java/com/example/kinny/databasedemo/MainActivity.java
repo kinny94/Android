@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
             myDatabase.execSQL("INSERT INTO users (name, age) VALUES (Arjun, 23)");
             myDatabase.execSQL("INSERT INTO users (name, age) VALUES (Ron, 53)");
 
-            /   / To get data out of the database
+            // To get data out of the database
             Cursor c = myDatabase.rawQuery("SELECT * FROM users", null);
 
             // To get indexes of columns, necessary in android
