@@ -30,7 +30,7 @@ public class ArticleActivity extends AppCompatActivity {
             webView.loadUrl(url);
         } else if (connec != null && ((connec.getNetworkInfo(ConnectivityManager.TYPE_WIFI).getState() == NetworkInfo.State.DISCONNECTED) || (connec.getNetworkInfo(ConnectivityManager.TYPE_MOBILE).getState() == NetworkInfo.State.DISCONNECTED ))) {
             //Not connected.
-            Toast.makeText(getApplicationContext(), "You are not connected to the internet, Loading downloaded data!", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "You are not connected to the internet, Will render downloaded data if there is any.", Toast.LENGTH_LONG).show();
             webView.loadData(content, "text/html", "UTF-8");
         }
     }

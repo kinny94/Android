@@ -148,7 +148,18 @@ public class MainActivity extends AppCompatActivity {
                     String articleUrl = jsonObject.getString("url");
 
                     url = new URL(articleUrl);
+                    urlConnection = (HttpURLConnection) url.openConnection();
+                    in = urlConnection.getInputStream();
+                    reader = new InputStreamReader(in);
+                    data = reader.read();
+
                     String articleContent = "";
+
+                    while(data != -1){
+                        char current  = (char) data;
+                        articleInfo += current;
+                        data = reader.read();
+                    }
 
                     articleIds.add(Integer.valueOf(articleId));
                     articleTitles.put(Integer.valueOf(articleId), articleTitle);
